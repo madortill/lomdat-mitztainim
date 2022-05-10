@@ -1,0 +1,231 @@
+@font-face {
+    font-family: Assistant;
+    src: url("assets/fonts/Assistant-Light.ttf");
+}
+
+@font-face {
+    font-family: Karantina-Bold;
+    src: url("assets/fonts/Karantina-Bold.ttf");
+}
+
+@font-face {
+    font-family: Karantina;
+    src: url("assets/fonts/Karantina-Light.ttf");
+}
+
+* {
+    font-family: Assistant;
+    color: white;
+}
+
+/* טוען */
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f45d;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.loader > img {
+    width: 50vw;
+}
+
+.loader.fade {
+    animation: fadeOut 1s 2s forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+body, html {
+    font-family: Assistant;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url("assets/media/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    direction: rtl;
+}
+
+.logo {
+    position: fixed;
+    width: 18vw;
+    top: 1vh;
+    height: 7vh;
+    left: 1vw;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.body {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 90vh;
+    overflow: scroll;
+}
+
+.title {
+    width: 100%;
+    font-size: 6em;
+    text-align: center;
+    font-family: karantina-bold;
+}
+
+.banner {
+    position: relative;
+    height: 19vh;
+    width: 93vw;
+    margin: 5em 2em;
+    background-color: white;
+}
+
+.background-img-commander {
+    width: 100%;
+    height: 100%;
+    font-family: Assistant;
+}
+
+/* .commercial {
+    font-size: 4em;
+    position: fixed;
+    width: 80vw;
+    background-color: white;
+    background-image: url("");
+    top: 27vh;
+    height: 50vh;
+    z-index: 1;
+    right: 10vw;
+    display: none;
+    text-align: center;
+} */
+
+.background-name {
+    width: 100%;
+    position: absolute;
+    height: fit-content;
+    font-family: Assistant;
+    background-color: #c9c9c9c7;
+    bottom: -2.8vh;
+    color: black;
+    font-size: 4em;
+}
+
+.commercial, .div-lost, .div-win {
+    width: 84vw;
+    font-size: 3.5em;
+    height: fit-content;
+    background-image: url(assets/media/questions_popup.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    position: fixed;
+    top: 19vh;
+    right: 8vw;
+    z-index: 1;
+    text-align: center;
+}
+
+.div-lost {
+    display: none;
+}
+
+.div-win {
+    display: none;
+}
+
+.commercial {
+    display: none;
+}
+
+.button-for-Question {
+    height: 5vh;
+    width: 31vw;
+    font-size: 0.8em;
+    background-image: url(assets/media/questions_popup.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 24px;
+    margin-bottom: 1em;
+}
+
+.multipleQuestionContainer {
+    width: 84vw;
+    height: fit-content;
+    background-image: url(assets/media/questions_popup.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    position: fixed;
+    top: 19vh;
+    right: 8vw;
+    z-index: 1;
+    display: none;
+    text-align: center;
+}
+
+.background-black {
+    position: fixed;
+    background-color: #0000005c;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.multipleQuestion {
+    font-family: Karantina;
+    font-size: 8em;
+    margin: 0.4em;
+}
+
+.multipleAns  {
+    background-image: url(assets/media/generic_button.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-y: center;
+    width: 45vw;
+    height: 7vh;
+    /* line-height: 6.5vh; */
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ansContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.num-question {
+    font-size: 2em;
+}
+
+.win-p {
+    margin: 1em;
+}
