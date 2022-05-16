@@ -87,7 +87,7 @@ const onClickAnswer = (event) => {
         } else {
             questionsEnd();
         }
-    }, 3000)
+    }, 1500)
 }
 
 /* questionsEnd
