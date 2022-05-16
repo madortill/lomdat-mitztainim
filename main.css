@@ -128,9 +128,10 @@ body, html {
     height: fit-content;
     font-family: Assistant;
     background-color: #c9c9c9c7;
-    bottom: -2.8vh;
+    bottom: 0vh;
     color: black;
     font-size: 4em;
+    margin: 0;
 }
 
 .commercial, .div-lost, .div-win {
