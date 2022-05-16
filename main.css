@@ -163,7 +163,7 @@ body, html {
 
 .button-for-Question {
     height: 5vh;
-    width: 31vw;
+    width: fit-content;
     font-size: 0.8em;
     background-image: url(assets/media/questions_popup.svg);
     background-repeat: no-repeat;
