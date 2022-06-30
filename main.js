@@ -4,7 +4,39 @@ let arrMultipleQuestions = [];
 // const
 const AMOUNT_OF_QUESTION = 10; // how many questions we want out of the array
 const CODE = 4;
-
+let info = [
+    {
+        "name" : "יפה לולה",
+    },
+    {
+        "name" : "מאיר יוסף",
+    },
+    {
+        "name" : "אגם שלו",
+    },
+    {
+        "name" : "שני עמית",
+    },
+    {
+        "name" : "רפאל בן דרור",
+    },
+    {
+        "name" : "שובל דוד",
+    },
+    {
+        "name" : "לירן כהן",
+    },
+    {
+        "name" : "אור חן",
+    },
+    {
+        "name" : "זוהר שמש",
+    },
+    {
+        "name" : "אלמוג נהרי",
+    },
+    
+]
 
 window.addEventListener("load", () => {
     document.querySelector(".loader").classList.add("fade");
