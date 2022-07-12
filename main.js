@@ -7,33 +7,43 @@ const CODE = 4;
 let info = [
     {
         "name" : "יפה לולה",
+        "title" : `משקית ת"ש`,
     },
     {
         "name" : "מאיר יוסף",
+        "title" : `מדא"ג`,
     },
     {
         "name" : "אגם שלו",
+        "title" : `מדריכת קליעה`,
     },
     {
         "name" : "שני עמית",
+        "title" : `מ"כית`,
     },
     {
         "name" : "רפאל בן דרור",
+        "title" : `מנהל רשת`,
     },
     {
         "name" : "שובל דוד",
+        "title" : `מפתחת לומדה`,
     },
     {
         "name" : "לירן כהן",
+        "title" : `מטמיע מעלה`,
     },
     {
         "name" : "אור חן",
+        "title" : `צלם צבאי`,
     },
     {
         "name" : "זוהר שמש",
+        "title" : `גרפיקאי`,
     },
     {
         "name" : "אלמוג נהרי",
+        "title" : `מש"ק שלישות`,
     },
     
 ]
@@ -48,7 +58,7 @@ let add = () => {
     for (let i = 1; i <= info.length; i++) {
         let item = El("div",{cls : `banner`},
             El("img",{attributes: {class: `background-img-commander`, src : `assets/media/mefaked_${i}.jpg` , alt : `mefaked_${i}`},}),
-            El("p",{cls: `background-name`},`מצטיין מספר ${i} - ${info[i - 1].name}`,),            
+            El("p",{cls: `background-name`},`${info[i - 1].name} - ${info[i - 1].title}`,),            
         );
         document.querySelector(`.start`).append(item);
     }
@@ -103,11 +113,9 @@ const onClickAnswer = (event) => {
     // check if answer is correct
     if(event.currentTarget.classList[1] === String(arrMultipleQuestions[nMultipleCurrentQuestion].correctAns)){
         document.querySelector(`#${event.currentTarget.id}`).style.cssText = `background-image: url("assets/media/right_button.svg");`;
-        console.log("נכון");
         nMultipleCorrectAnswers++;
     } else {
         document.querySelector(`#${event.currentTarget.id}`).style.cssText = `background-image: url("assets/media/wrong_button.svg");`;
-        console.log("לא נכון");
 
     }
 
@@ -119,7 +127,7 @@ const onClickAnswer = (event) => {
         } else {
             questionsEnd();
         }
-    }, 1500)
+    }, 1200)
 }
 
 /* questionsEnd
@@ -130,7 +138,6 @@ const questionsEnd = () => {
         document.querySelector(`.div-win`).style.display = "block";
         document.querySelector(`.win-p`).innerHTML = `כל הכבוד! <br> עניתם על על ${nMultipleCorrectAnswers} תשובות נכונות! <br> <br> הקוד הוא ${CODE} `
         document.querySelector(`.multipleQuestionContainer`).style.display = "none";
-        console.log("ניצחת");
     } else {
         document.querySelector(`.div-lost`).style.display = "block";
         document.querySelector(`.multipleQuestionContainer`).style.display = "none";
